@@ -66,7 +66,9 @@ const [isTransitioning, setIsTransitioning] = useState(false)
       
         if (!obj) return
       
-        setIsTransitioning(true)
+        setTimeout(() => {
+            setIsTransitioning(true)
+          }, 350)
       
         targetRef.current = {
           x: obj.x,
@@ -76,14 +78,15 @@ const [isTransitioning, setIsTransitioning] = useState(false)
         // ⏳ wait for zoom animation
         setTimeout(() => {
           setActiveView(id)
-          setIsTransitioning(false)
-        }, 600) // match camera transition speed
+          
+        }, 500) // match camera transition speed
       }
 
     function resetCamera() {
         setFocusedObjectId(null)
         setMode("idle")
         setActiveView(null)
+        setIsTransitioning(false)
         targetRef.current = null
 
         setCamera({

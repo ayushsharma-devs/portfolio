@@ -1,20 +1,35 @@
-export const projects = [
-    {
-      id: "rusty",
-      name: "Rusty AI Assistant",
-      description: "Local voice assistant with memory + intent system",
-      year: "2025",
-    },
-    {
-      id: "agent-system",
-      name: "Autonomous Agent System",
-      description: "Multi-agent task automation framework",
-      year: "2026",
-    },
-    {
-      id: "quantum-research",
-      name: "Quantum Crypto Research",
-      description: "QKD + UAV secure communication study",
-      year: "2025–2026",
-    }
-  ]
+export type Project = {
+  id: string
+  name: string
+  year: string
+  type: "markdown" | "pdf" | "link"
+  src: string
+  icon: string
+}
+
+export const projects: Project[] = [
+  {
+    id: "rusty",
+    name: "Rusty AI",
+    year: "2025",
+    type: "markdown",
+    src: "/projects/rusty/README.md",
+    icon: "/room-assets/file_icon-removebg-preview.png"
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    year: "2026",
+    type: "link",
+    src: "https://github.com/ayushsharma-devs",
+    icon: "/room-assets/file_icon-removebg-preview.png"
+  },
+  {
+    id: "quantum",
+    name: "Quantum Drone Security",
+    year: "2026",
+    type: "pdf",
+    src: "/projects/papers/Quantum_Cryptography_and_Secure_Drone_Communication (3).pdf",
+    icon: "/room-assets/file_icon-removebg-preview.png"
+  }
+]

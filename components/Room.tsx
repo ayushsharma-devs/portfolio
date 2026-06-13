@@ -13,7 +13,8 @@ export default function Room() {
     focusObject,
     resetCamera,
     visitedObjects,
-    activeView
+    activeView,
+    isTransitioning
   } = useRoomState()
 
   if (activeView === "laptop") {
@@ -35,9 +36,18 @@ export default function Room() {
 
         
         style={{
-          transform: `translate(${camera.x}px, ${camera.y}px) scale(${camera.scale})`,
+          transform: `
+            translate(${camera.x}px, ${camera.y}px)
+            scale(${camera.scale})
+          `,
           transformOrigin: "center center",
-          transition: "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)"
+      
+          opacity: isTransitioning ? 0 : 1,
+      
+          transition: `
+            transform 0.05s linear,
+            opacity 0.25s ease
+          `
         }}
       >
 
