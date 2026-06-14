@@ -19,9 +19,9 @@ export type RoomObject = {
   }
   sprite?:string
   layer: number
-  depth: number
+
   interactionType: InteractionType
-  contentRef: string
+
   state?: EntityState
 personality?: "calm" | "chaotic" | "static"
 }

@@ -75,6 +75,7 @@ export default function LaptopView({ onExit }: { onExit: () => void }) {
       >
         {project.name}
       </div>
+      <div className="text-[10px] opacity-50">{project.year}</div>
     </div>
   ))}
 </div>

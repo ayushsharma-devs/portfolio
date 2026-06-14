@@ -104,8 +104,6 @@ const [isTransitioning, setIsTransitioning] = useState(false)
         resetCamera,
         visitedObjects,
         activeView,
-        setActiveView,
-        isTransitioning,
-        setIsTransitioning
-    }
+        isTransitioning
+      }
 }
